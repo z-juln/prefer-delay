@@ -10,6 +10,9 @@ prefer delay
 
 ### promiseDelay
 
+> 函数多次执行的场景下，设置时间间隔限制
+> Set the time interval limit when the function is executed multiple times
+
 ```typescript
 const { promiseDelay } = require('prefer-delay');
 
