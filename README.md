@@ -14,7 +14,7 @@ prefer delay
 const { promiseDelay } = require('prefer-delay');
 
 console.log('start\t', Date.now());
-const print = async (index: number) => console.log(index, '\t', Date.now());
+const print = (index: number) => console.log(index, '\t', Date.now());
 const delayFn = promiseDelay(print, 1000);
 delayFn(1); // expect time: 0
 delayFn(2); // expect time: 1000
@@ -24,17 +24,21 @@ delayFn(5); // expect time: 4000
 setTimeout(() => {
   delayFn(6); // expect time: 5000
 }, 4500);
+setTimeout(() => {
+  delayFn(7); // expect time: 6500
+}, 6500);
 ```
 
 print:
 ```
-start    1676624214660
-1        1676624215663
-2        1676624216661
-3        1676624217662
-4        1676624218662
-5        1676624219662
-6        1676624220662
+start    1676624969053
+1        1676624969056
+2        1676624970055
+3        1676624971054
+4        1676624972055
+5        1676624973055
+6        1676624974055
+7        1676624975558
 ```
 
 ### delay

@@ -12,7 +12,23 @@
     "build": "npx tsc",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "promise",
+    "resolve",
+    "delay",
+    "defer",
+    "wait",
+    "stall",
+    "timeout",
+    "settimeout",
+    "event",
+    "loop",
+    "nexttick",
+    "async",
+    "await",
+    "promises",
+    "threshold"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
